@@ -6,7 +6,7 @@ import
   ../nitches/[getUser, getHostname,
                   getDistro, getKernel,
                   getUptime, getShell,
-                  getPkgs, getRam, getLogo]  # import nitches to get info about user system
+                  getPkgs, getLogo]  # import nitches to get info about user system
 
 # the main function for drawing fetch
 proc drawInfo*(asciiArt: bool) =
@@ -25,12 +25,11 @@ proc drawInfo*(asciiArt: bool) =
     uptimeIcon = " "  # recomended: " " or "|>"
     shellIcon  = " "  # recomended: " " or "|>"
     pkgsIcon   = "󰏖 "  # recomended: "󰏖 " or "|>"
-    ramIcon    = "󰍛 "  # recomended: "󰍛 " or "|>"
     colorsIcon = "󰏘 "  # recomended: "󰏘 " or "->"
     # please insert any char after the icon
     # to avoid the bug with cropping the edge of the icon
 
-    dotIcon = ""  # recomended: "" or "■"
+    dotIcon = " "  # recomended: " " or "■"
     # icon for demonstrate colors
 
   const  # categories
@@ -41,7 +40,6 @@ proc drawInfo*(asciiArt: bool) =
     uptimeCat = " uptime │ "  # recomended: " uptime │ "
     shellCat  = " shell  │ "  # recomended: " shell  │ "
     pkgsCat   = " pkgs   │ "  # recomended: " pkgs   │ "
-    ramCat    = " memory │ "  # recomended: " memory │ "
     colorsCat = " colors │ "  # recomended: " colors │ "
 
   let  # all info about system
@@ -52,7 +50,6 @@ proc drawInfo*(asciiArt: bool) =
     uptimeInfo   = getUptime()        # get Uptime through /proc/uptime file
     shellInfo    = getShell()         # get shell through $SHELL env variable
     pkgsInfo     = getPkgs(distroId)  # get amount of packages in distro
-    ramInfo      = getRam()           # get ram through /proc/meminfo
 
   const  # aliases for colors
     color1 = fgRed
@@ -81,7 +78,6 @@ proc drawInfo*(asciiArt: bool) =
     stdout.styledWrite("  │ ", color5, uptimeIcon, color0, uptimeCat, color5, uptimeInfo, color0, "\n")
     stdout.styledWrite("  │ ", color6, shellIcon, color0, shellCat, color6, shellInfo, color0, "\n")
     stdout.styledWrite("  │ ", color1, pkgsIcon, color0, pkgsCat, color1, pkgsInfo, color0, "\n")
-    stdout.styledWrite("  │ ", color2, ramIcon, color0, ramCat, fgYellow, ramInfo, color0, "\n")
     stdout.styledWrite("  ├───────────┤\n")
     stdout.styledWrite("  │ ", color7, colorsIcon, color0, colorsCat, color7, dotIcon, " ", color1, dotIcon, " ", color2, dotIcon, " ", color3, dotIcon, " ", color4, dotIcon, " ", color5, dotIcon, " ", color6, dotIcon, " ", color8, dotIcon, color0, "\n")
     stdout.styledWrite("  ╰───────────╯\n\n")
