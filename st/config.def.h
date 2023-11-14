@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "Liberation Mono:pixelsize=12:antialias=true:autohint=true";
-static int borderpx = 2;
+static char *font = "Hack Nerd Font:pixelsize=14:antialias=true:autohint=true";
+static int borderpx = 32;
 
 /*
  * What program is execed by st depends of these precedence rules:
@@ -96,32 +96,28 @@ unsigned int tabspaces = 8;
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
 	/* 8 normal colors */
-	"black",
-	"red3",
-	"green3",
-	"yellow3",
-	"blue2",
-	"magenta3",
-	"cyan3",
-	"gray90",
+	"#494D64",
+	"#ED8796",
+	"#A6DA95",
+	"#EED49F",
+	"#8AADF4",
+	"#F5BDE6",
+	"#8BD5CA",
+	"#B8C0E0",
 
 	/* 8 bright colors */
-	"gray50",
-	"red",
-	"green",
-	"yellow",
-	"#5c5cff",
-	"magenta",
-	"cyan",
-	"white",
+	"#5B6078",
+	"#ED8796",
+	"#A6DA95",
+	"#EED49F",
+	"#8AADF4",
+	"#F5BDE6",
+	"#8BD5CA",
+	"#A5ADCB",
 
-	[255] = 0,
-
-	/* more colors can be added after 255 to use with DefaultXX */
-	"#cccccc",
-	"#555555",
-	"gray90", /* default foreground colour */
-	"black", /* default background colour */
+  [256] = "#CAD3F5", /* default foreground colour */
+  [257] = "#24273A", /* default background colour */
+  [258] = "#F4DBD6", /*575268*/
 };
 
 
