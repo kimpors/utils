@@ -1,0 +1,62 @@
+" Options
+set adblocker=update
+set downloadmethod=confirm
+set nofollownewtabswitch
+set mintabwidth=250
+set redirecttohttp
+set restoretabs=pinned
+set searchengine=https://google.com/search?q=%s
+set searchwords=w~https://www.wikipedia.org/w/index.php?title=Special:Search&search=%s
+set tabreopenposition=previous
+
+" Custom Commands
+command! enterVisualMode <p.start><p.startVisualSelect>
+command! scrollPageDown <scrollPageDownHalf>
+command! scrollPageUp <scrollPageUpHalf>
+command! goPrevious <previousPage>
+command! goNext <nextPage>
+command! Vomnibar.activate <toExploreMode>
+command! Vomnibar.activateInNewTab <:tabnew><toExploreMode>
+command! Vomnibar.activateTabSelection <toCommandMode>buffer<Space>
+command! firstTab <:buffer 0>
+command! lastTab <:buffer -1>
+command! visitPreviousTab <:buffer #>
+command! Vomnibar.activateEditUrl <toExploreMode><End>
+command! Vomnibar.activateEditUrlInNewTab <:tabnew><toExploreMode>
+command! removeTab <:close>
+command! restoreTab <reopenTab>
+command! duplicateTab <openNewTabWithCurrentUrl><CR>
+command! moveTabLeft <moveTabBackward>
+command! moveTabRight <moveTabForward>
+command! showHelp <:help>
+
+command! closeTabsOnLeft <:lclose>
+command! closeTabsOnRight <:rclose>
+command! closeOtherTabs <:rclose><:lclose>
+
+" Mappings
+nmap v <:enterVisualMode>
+nmap d <:scrollPageDown>
+nmap u <:scrollPageUp>
+nunmap [
+nunmap ]
+nmap [[ <:goPrevious>
+nmap ]] <:goNext>
+nmap o <:Vomnibar.activate>
+nmap O <:Vomnibar.activateInNewTab>
+nmap T <:Vomnibar.activateTabSelection>
+nmap g0 <:firstTab>
+nmap g$ <:lastTab>
+nmap J <previousTab>
+nmap K <nextTab>
+nmap ^ <:visitPreviousTab>
+nmap ge <:Vomnibar.activateEditUrl>
+nmap gE <:Vomnibar.activateEditUrlInNewTab>
+nmap x <:removeTab>
+nmap X <:restoreTab>
+nmap yt <:duplicateTab>
+nmap <lt><lt> <:moveTabLeft>
+nmap >> <:moveTabRight>
+nmap ? <:showHelp>
+
+" vim: ft=vim

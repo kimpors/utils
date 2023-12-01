@@ -1,0 +1,36 @@
+<!--
+    Vieb - Vim Inspired Electron Browser
+    Copyright (C) 2019-2023 Jelmer van Arnhem
+
+    This program is free software: you can redistribute it and/or modify
+    it under the terms of the GNU General Public License as published by
+    the Free Software Foundation, either version 3 of the License, or
+    (at your option) any later version.
+
+    This program is distributed in the hope that it will be useful,
+    but WITHOUT ANY WARRANTY; without even the implied warranty of
+    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+    GNU General Public License for more details.
+
+    You should have received a copy of the GNU General Public License
+    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+-->
+<!DOCTYPE html>
+<html>
+<head>
+    <link id="default-styling" href="../colors/default.css" rel="stylesheet" type="text/css">
+    <title>History</title>
+    <meta http-equiv="Content-Security-Policy" content="img-src file://* data:; object-src 'none'; style-src 'unsafe-inline' file://*; script-src 'none'; default-src 'none'">
+    <link rel="shortcut icon" type="image/svg+xml" href="../img/vieb.svg">
+</head>
+<body class="specialpage" id="historypage">
+    <h1>History</h1>
+    <div id="scanning-progress">Reading history...</div>
+    <input type="text" placeholder="Filter history" id="filter" />
+    <div id="hist-container">
+        <div id="pages"></div>
+        <input type="number" placeholder="Entries per page" id="perpage" min="1" step="1" />
+    </div>
+    <div id="list"></div>
+</body>
+</html>

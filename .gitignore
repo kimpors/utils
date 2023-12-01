@@ -36,3 +36,12 @@ dwm
 machine.h
 pkg/*
 *.pkg.tar.xz
+
+# Vieb
+
+build
+dist
+node_modules
+*.swp
+logo-wip-files
+ViebData
