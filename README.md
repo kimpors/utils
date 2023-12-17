@@ -55,6 +55,6 @@ Edit the `src/funcs/drawing.nim` file for configuration.
 
 ## Contributing
 
-Contributions are welcome! If you have any suggestions    
-, or would like to contribute a new feature,    
+Contributions are welcome! If you have any suggestions,    
+or would like to contribute a new feature,    
 please create an issue or submit a pull request.
