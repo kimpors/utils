@@ -44,15 +44,6 @@ support for X resources.
 
 Edit the `config.h` file for configuration.
 
-## [nitch](https://github.com/ssleert/nitch)
-
-`nitch` is a lightweight system information tool inspired    
-by neofetch but designed for speed and simplicity.
-
-### Configuration
-
-Edit the `src/funcs/drawing.nim` file for configuration.
-
 ## Contributing
 
 Contributions are welcome! If you have any suggestions,    
