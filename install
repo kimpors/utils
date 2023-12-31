@@ -1,0 +1,8 @@
+#!/bin/bash
+
+sudo make install clean -C ./st
+sudo make install clean -C ./dwm
+sudo make install clean -C ./dmenu
+sudo make install clean -C ./slstatus
+
+echo -e "\nDone ^_^\n"
