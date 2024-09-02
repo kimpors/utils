@@ -1,6 +1,6 @@
 #!/bin/bash
 
-sudo pacman -S libxinerama libxft xterm feh
+sudo pacman -S libxinerama libxft xterm feh xdg-utils adobe-source-han-sans-jp-fonts
 
 sudo make install clean -C ./st
 sudo make install clean -C ./dwm
