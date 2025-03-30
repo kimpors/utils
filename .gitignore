@@ -32,7 +32,6 @@ nitch*
 *.hex
 
 # Project-specific
-dwm
 machine.h
 pkg/*
 *.pkg.tar.xz
